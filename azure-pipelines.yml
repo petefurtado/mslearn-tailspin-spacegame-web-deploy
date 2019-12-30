@@ -127,7 +127,7 @@ stages:
               targetType: 'inline'
               script: | 
                 Write-Host "Auto Generated SQL Update Script:"
-                Get-Content "$(SqlDeploymentOutputFile)" | foreach {Write-Output $_}
+                Get-Content d:\a\1\s\GeneratedOutputFiles\$(databasename)_Script.sql | foreach {Write-Output $_}
 
 - stage: DBAVerificationApply
   displayName: 'Apply database schema changes'
